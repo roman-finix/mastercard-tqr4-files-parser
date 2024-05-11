@@ -72,6 +72,8 @@ for tupl in widthsSpec:
 #converters={i: str for i in range(len(widthsNames))}
 #print(converters)
 
+pd.set_option("display.max_rows", None)
+pd.set_option("display.max_columns", None)
 df = pd.read_fwf(sys.argv[1], widths=widths,
    names=widthsNames, keep_default_na=False, converters={i: str for i in range(len(widthsNames))})
 
